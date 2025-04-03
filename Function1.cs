@@ -30,7 +30,7 @@ namespace TickethubFunction
                 PropertyNameCaseInsensitive = true
             };
             
-            Ticket? ticket = JsonSerializer.Deserialize<Ticket>(messageJson);
+            Ticket? ticket = JsonSerializer.Deserialize<Ticket>(messageJson, options);
 
             // Check if the deserialization was successful
             if (ticket == null)
